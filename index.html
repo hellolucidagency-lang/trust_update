@@ -1791,6 +1791,7 @@ async function loadProperties() {
     }
 
     const records = Array.isArray(json) ? json
+      : Array.isArray(json?.properties) ? json.properties
       : Array.isArray(json?.data) ? json.data
       : Array.isArray(json?.items) ? json.items
       : null;
